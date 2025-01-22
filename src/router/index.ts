@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '@/views/HomeView.vue'
+import { h } from 'vue'
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -14,9 +15,20 @@ const router = createRouter({
       component: () => import('@/views/ProjectsView.vue'),
     },
     {
-      path: '/projects/:id',
+      path: '/project/:id',
       name: 'single-project',
       component: () => import('@/views/SingleProjectView.vue'),
+    },
+    {
+      path: '/:catchAll(.*)*',
+      name: 'not-found',
+      component: h(
+        'div',
+        {
+          style: 'font-size: 2rem; font-weight: bold; color: darkred;',
+        },
+        'Page not found',
+      ),
     },
   ],
 })
