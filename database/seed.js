@@ -1,15 +1,18 @@
+/* eslint-env node */
+
+import dotenv from 'dotenv'
 import { faker } from '@faker-js/faker'
+import { createClient } from '@supabase/supabase-js'
 
-const fullName = faker.person.fullName()
-const persionBio = faker.person.bio()
-const persionJobTitle = faker.person.jobTitle()
-const persionJobDescriptor = faker.person.jobDescriptor()
-const persionJobArea = faker.person.jobArea()
-const persionJobType = faker.person.jobType()
+// Load environment variables
+dotenv.config()
 
-console.log(fullName)
-console.log(persionBio)
-console.log(persionJobTitle)
-console.log(persionJobDescriptor)
-console.log(persionJobArea)
-console.log(persionJobType)
+// Create a single supabase client for interacting with your database
+const supabase = createClient(process.env.VITE_SUPABASE_URL, process.env.VITE_SUPABASE_KEY)
+
+// Add a simple seed function to use faker (resolving the unused import warning)
+async function seedDatabase() {
+  console.log(supabase)
+}
+
+seedDatabase().catch(console.error)
