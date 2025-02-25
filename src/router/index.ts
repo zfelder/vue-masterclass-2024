@@ -15,6 +15,11 @@ const router = createRouter({
       component: () => import('@/views/ProjectsView.vue'),
     },
     {
+      path: '/tasks',
+      name: 'tasks',
+      component: () => import('@/views/TasksView.vue'),
+    },
+    {
       path: '/project/:id',
       name: 'single-project',
       component: () => import('@/views/SingleProjectView.vue'),
