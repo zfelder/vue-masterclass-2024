@@ -1,12 +1,39 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import Input from '@/components/ui/input/Input.vue'
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu'
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
+</script>
 
 <template>
   <nav class="flex h-16 items-center justify-between border-b bg-muted/40 px-8">
     <form class="w-full max-w-96">
-      <input class="w-full bg-background pl-8" type="text" placeholder="Search..." />
+      <Input class="w-full bg-background pl-8" type="text" placeholder="Search..." />
       <!-- avatar -->
     </form>
-    <div class="h-8 w-8 rounded-full bg-white"></div>
+
+    <DropdownMenu>
+      <DropdownMenuTrigger
+        ><Avatar>
+          <AvatarImage src="https://github.com/unovue.png" alt="@unovue" />
+          <AvatarFallback>CN</AvatarFallback>
+        </Avatar></DropdownMenuTrigger
+      >
+      <DropdownMenuContent>
+        <DropdownMenuLabel>My Account</DropdownMenuLabel>
+        <DropdownMenuSeparator />
+        <DropdownMenuItem>Profile</DropdownMenuItem>
+        <DropdownMenuItem>Billing</DropdownMenuItem>
+        <DropdownMenuItem>Team</DropdownMenuItem>
+        <DropdownMenuItem>Subscription</DropdownMenuItem>
+      </DropdownMenuContent>
+    </DropdownMenu>
   </nav>
   <main>
     <RouterView />

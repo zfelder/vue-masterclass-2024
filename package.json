@@ -21,12 +21,14 @@
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.48.0",
+    "@vueuse/core": "^12.7.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "dotenv": "^16.4.7",
     "lucide-vue-next": "^0.476.0",
     "pinia": "^2.3.1",
     "radix-vue": "^1.9.16",
+    "reka-ui": "^2.0.0",
     "tailwind-merge": "^3.0.2",
     "tailwindcss-animate": "^1.0.7",
     "vue": "^3.5.13",
@@ -55,5 +57,3 @@
     "vue-tsc": "^2.2.0"
   }
 }
-
-// shadcn version 0.11.4
