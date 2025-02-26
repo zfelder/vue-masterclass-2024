@@ -1,0 +1,12 @@
+Experience gained:
+
+- Providing TypeScript type definitions for refs
+- Adding TypeScript support to Supabase in Vue.js
+- Creating a new page for tasks with database migration and seeding
+- Getting started with ShadCN UI and Vue.js
+- Preparing the Vue app layout with TailwindCSS
+- Learned about a new plugin for TailWindCSS: https://tailwindcss.com/blog/automatic-class-sorting-with-prettier
+
+For the project (good to knows):
+
+Shadcn tutorial version: npx shadcn-vue@^0.11.4 init
